@@ -1,0 +1,80 @@
+# ============================================================
+# Logs
+# ============================================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================================
+# Node / Vue
+# ============================================================
+node_modules
+dist
+dist-ssr
+*.local
+
+# ============================================================
+# Rust / Cargo build artifacts
+# ============================================================
+**/target/
+**/*.rs.bk
+
+# ============================================================
+# Editor directories and files
+# ============================================================
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================================================
+# Windows toolchain cache (xwin cross-compilation)
+# ============================================================
+.xwin-cache/
+_target
+
+# ============================================================
+# Compiled native runner binaries (built by pnpm build:runner:*)
+# Not committed — users build these from source
+# ============================================================
+src-tauri/resources/*.exe
+src-tauri/resources/src-darwin
+src-tauri/resources/src-win.exe
+src-tauri/resources/src-linux
+src-tauri/resources/src-macos
+
+# ============================================================
+# Development-only helper scripts (not part of the project)
+# ============================================================
+build_env.ps1
+compile_project.ps1
+compile_release.ps1
+compile_rust.ps1
+run_test.ps1
+run_tests.ps1
+capture_screen.ps1
+
+# ============================================================
+# Temporary test outputs and screenshots
+# ============================================================
+screenshot_test.png
+out.log
+err.log
+rel_out.log
+rel_err.log
+Z:/
+
+# ============================================================
+# Session and settings data files (runtime-generated, user-specific)
+# ============================================================
+active_session.json
+settings.json
