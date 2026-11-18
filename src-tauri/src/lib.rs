@@ -544,8 +544,6 @@ async fn set_custom_start_time(
     if let Some(session) = session::get_active_session_internal() {
         let activity_json = serde_json::json!({
             "app_id": session.app_id.to_string(),
-            "details": format!("Playing {}", session.game_name),
-            "state": "Quest in progress",
             "timestamp": custom_timestamp,
         })
         .to_string();
@@ -572,8 +570,6 @@ async fn reset_custom_start_time(handle: AppHandle) -> Result<(), String> {
     if let Some(session) = session::get_active_session_internal() {
         let activity_json = serde_json::json!({
             "app_id": session.app_id.to_string(),
-            "details": format!("Playing {}", session.game_name),
-            "state": "Quest in progress",
             "timestamp": session.start_timestamp,
         })
         .to_string();

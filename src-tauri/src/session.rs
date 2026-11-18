@@ -229,13 +229,10 @@ pub fn init_power_and_resume_monitor(app: AppHandle) {
                 let app_handle_clone = app.clone();
                 let app_id_str = session.app_id.to_string();
                 let start_ts = get_effective_rpc_timestamp(session.start_timestamp);
-                let details_str = format!("Playing {}", session.game_name);
 
                 tauri::async_runtime::spawn(async move {
                     let activity_json = serde_json::json!({
                         "app_id": app_id_str,
-                        "details": details_str,
-                        "state": "Quest in progress",
                         "timestamp": start_ts,
                     })
                     .to_string();

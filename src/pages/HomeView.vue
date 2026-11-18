@@ -490,8 +490,6 @@ async function continueRPCRisk(game: Game | null) {
         invoke('connect_to_discord_rpc_3', {
             activity_json: JSON.stringify({
                 app_id: gameToTest.id,
-                details: `Playing ${gameToTest.name}`,
-                state: 'Quest in progress',
                 timestamp: customStartTimestamp.value || activeSession.value?.start_timestamp || Math.floor(Date.now() / 1000),
             }),
             action: 'connect',

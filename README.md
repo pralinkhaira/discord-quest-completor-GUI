@@ -343,6 +343,9 @@ This starts the Vite development server on `http://localhost:1420` and launches 
 
 ### Production Build
 
+> [!TIP]
+> For a full, one-click automated build or step-by-step MinGW instructions, see **[`Build It.md`](./Build%20It.md)** and run `.\build.ps1`.
+
 ```bash
 pnpm tauri build
 ```
